@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon Light Parallax Effects| Vanilla Javascript</title>
+    <link rel="stylesheet" type="text/css" href="s1.css">
+</head>
+<body>
+    <section>
+        <img src="bg.jpg" id="bg">
+        <img src="moon.png" id="moon">
+        <img src="mountain.png" id="mountain">
+        <img src="road.png" id="road">
+        <h2 id="text">moon light</h2>
+    </section>
+    <section>
+        <p class="hieu">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper mauris et orci sollicitudin, hendrerit accumsan lorem vulputate. Quisque eleifend laoreet augue vitae sagittis. Morbi gravida felis sapien, vel hendrerit nibh gravida condimentum. Donec porttitor tristique vestibulum. Duis tristique lectus at facilisis blandit. Ut porta consequat dolor at aliquam. Donec id est imperdiet, vulputate lacus eu, viverra ante. Nulla eu tincidunt tellus. Cras ac ultricies leo. Curabitur viverra risus at lorem interdum efficitur. Ut vulputate risus a sapien aliquet, non interdum est consequat. Aenean porta magna arcu. Curabitur arcu tortor, fermentum quis risus id, tempus pharetra mi. Mauris sit amet purus tellus. Pellentesque ullamcorper nisl sed mi feugiat aliquam.
+        Aliquam id dictum nunc. Aenean aliquet libero id ipsum iaculis vestibulum ut at odio. Donec non ex a risus sagittis consectetur at non lorem. Maecenas at augue leo. Sed a varius purus. Vivamus a venenatis lacus, quis interdum sem. Pellentesque at vulputate nisl.
+        Phasellus non urna quis dui eleifend finibus. Fusce pharetra finibus velit, sed iaculis est fringilla sit amet. Sed feugiat mauris vitae sapien euismod, ac tempor dui posuere. Mauris vitae felis non nibh vulputate viverra eu et erat. Nulla facilisi. Morbi a ultrices leo. Integer vitae magna mollis risus vehicula ultricies. Sed in magna erat. Phasellus malesuada, est at facilisis molestie, nibh mauris iaculis turpis, ac imperdiet nisl enim eget felis. Sed sagittis nec libero nec laoreet. Maecenas pellentesque, elit a tincidunt varius, urna odio vehicula neque, in scelerisque elit ante id urna. Nulla est justo, egestas a neque non, egestas vehicula massa.
+        </p>
+    </section>
+    <script type="text/javascript">
+        let bg = document.getElementById("bg");
+        let moon = document.getElementById("moon");
+        let mountain = document.getElementById("mountain");
+        let road = document .getElementById("road");
+        let text = document.getElementById("text");
+
+        window.addEventListener('scroll', function(){
+            var value= window.scrollY;
+
+            bg.style.top = value* 0.4 + 'px';
+            moon.style.left = -value* 0.5 + 'px';
+            mountain.style.top = -value * 0.3 + 'px';
+            road.style.top = -value * 0.01 +'px';
+            text.style.top = value *1 +'px';
+        })
+    </script>
+</body>
+</html>

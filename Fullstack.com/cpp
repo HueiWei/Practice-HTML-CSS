@@ -1,0 +1,56 @@
+#include<iostream>
+#include<string>
+#define MAX 10
+using namespace std;
+
+class String {
+public:
+    string s1;
+    String() {
+
+    }
+    String(string name) {
+        s1 = name;
+    }
+    void nhap() {
+        cin >> s1;
+    }
+    void xuat() {
+        cout << s1 << endl;
+    }
+    void xoa() {
+        s1.clear();
+        cout << s1 << 0;
+    }
+    void ghepchuoi(String& obj) {
+        s1 = s1 + obj.s1;
+        cout << s1 << endl;
+    }
+    void daonguoc() {
+        string s2 = s1;
+        for (int i = 0; i < s1.length(); i++) {
+            s1[i] = s2[(s1.length()) - 1 - i];
+        }
+        cout << s1 << endl;
+    }
+    int length() {
+        cout << s1.length() << endl;
+    }
+    void sosanh(String& obj) {
+        if (s1.length() > obj.s1.length()) {
+            cout << "s1>obj" << endl;
+        }
+        else {
+            cout << "s1< = obj" << endl;
+        }
+    }
+};
+int main() {
+   	
+    String a;
+    String b("hieu");
+    a.nhap();
+    a.sosanh(b);
+    a.daonguoc();
+    return 0;
+}

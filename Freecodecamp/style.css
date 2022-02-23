@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+*{
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+:root{
+    --x: 5rem;
+    --y: 10rem;
+}
+.dropdown {
+    display: flex;
+    justify-content: center;
+    margin-top: 40vh;
+    /* transform: translateY(40vh); */
+    list-style-type: none;
+}
+a {
+    display: block;
+    width: var(--y);
+    height: var(--x);
+    background: linear-gradient(90deg, #ff6e7f,#bfe9ff);
+    color: white;
+    padding : 1.9rem 0;
+    font-weight: 900;
+    text-decoration: none;
+    text-align: center;
+    border:0px solid;
+    border-radius: 10px;
+    transition: all 0.5s ease-in;
+}
+a:hover{
+    background-color: black;
+    cursor: pointer;
+}
+.product {
+    list-style-type: none;
+    display: none;
+    position: relative;
+    transition: all .5s ease-in;
+}
+.dropdown li:nth-child(2):hover .product {
+    display: block;
+}
+.book {
+    list-style-type: none;
+    display: none;
+    position: absolute;
+    /* left: 10rem; */
+    /* transform: translateY(-2.5rem); */
+    top: calc(var(--x)*2);
+    left: var(--y);
+
+    
+}
+.product li:nth-child(3):hover .book {
+    display: block;
+}
+
